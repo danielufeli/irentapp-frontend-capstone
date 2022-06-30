@@ -47,7 +47,7 @@ const Login = () => (
                   </div>
                   <hr className="my-4" />
                   <div className="d-grid mb-2">
-                    <Link to="/signup" className="btn btn-secondary btn-login text-uppercase fw-bold">
+                    <Link to="/signup" className="btn btn-info btn-login text-uppercase fw-bold">
                       Sign Up
                     </Link>
                   </div>
