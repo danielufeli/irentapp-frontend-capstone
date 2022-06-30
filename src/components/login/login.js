@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => (
   <>
-    <section className="login">
+    <section className="login_bg">
       <div className="container">
         <div className="row">
           <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">

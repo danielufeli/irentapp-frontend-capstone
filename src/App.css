@@ -35,10 +35,18 @@
   to {
     transform: rotate(360deg);
   }
-} */
+} 
+*/
 
 .btn-login {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
   padding: 0.75rem 1rem;
+}
+
+.login_bg {
+  background: url(/public/login_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+  overflow: hidden;
 }
