@@ -41,13 +41,13 @@ const Login = () => (
                     </label>
                   </div>
                   <div className="d-grid">
-                    <Link to="/houses" className="btn btn-primary btn-login text-uppercase fw-bold">
+                    <Link to="/houses" className="btn btn-outline-dark btn-login text-uppercase fw-bold">
                       Sign in
                     </Link>
                   </div>
                   <hr className="my-4" />
                   <div className="d-grid mb-2">
-                    <Link to="/signup" className="btn btn-info btn-login text-uppercase fw-bold">
+                    <Link to="/signup" className="btn btn-warning btn-login text-uppercase fw-bold">
                       Sign Up
                     </Link>
                   </div>
