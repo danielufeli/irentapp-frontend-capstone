@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import mainLogo from '../../images/mainLogo.gif';
 
 const Aside = () => (
@@ -11,16 +12,20 @@ const Aside = () => (
     <div className="collapse navbar-collapse w-100" id="navbarSupportedContent">
       <ul className="navbar-nav w-100 d-flex flex-md-column text-center text-md-end">
         <li>
-          <a className="nav-link" aria-current="page" href="https://www.google.com/">Houses</a>
+          <Link to="/">Houses</Link>
+          {/* <a className="nav-link" aria-current="page" href="https://www.google.com/">Houses</a> */}
         </li>
         <li>
-          <a className="nav-link" href="https://www.google.com/">My Reservations</a>
+          <Link to="/reservations">My Reservations</Link>
+          {/* <a className="nav-link" href="https://www.google.com/">My Reservations</a> */}
         </li>
         <li>
-          <a className="nav-link" href="https://www.google.com/">Add Reservations</a>
+          <Link to="/addreservation">Add Reservation</Link>
+          {/* <a className="nav-link" href="https://www.google.com/">Add Reservations</a> */}
         </li>
         <li>
-          <a className="nav-link" href="https://www.google.com/">Log out</a>
+          <Link to="/logout">Log Out</Link>
+          {/* <a className="nav-link" href="https://www.google.com/">Log out</a> */}
         </li>
       </ul>
     </div>
