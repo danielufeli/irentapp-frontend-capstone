@@ -1,26 +1,70 @@
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getHouses } from '../../features/houses/housesState';
 import Aside from '../sidebar/sidebar';
 
-const Houses = () => (
+function Houses() {
+  const dispatch = useDispatch();
+  const houses = useSelector((state) => state.houses.houses);
 
-  <div className="container d-flex flex-column flex-md-row">
-    <Aside />
-    <main className="ps-0 ps-md-5 flex-grow-1">
-      <h1>This is the houses component</h1>
-      <h2>It will content the houses carousel</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ultrices auctor ornare. Etiam iaculis non est non dictum.
-        Suspendisse lobortis, lectus tristique mollis bibendum, eros urna viverra nulla,
-        quis ornare nulla sapien faucibus risus. Fusce in egestas orci. Donec vel nunc
-        sed libero rhoncus ullamcorper tempor non orci. Nulla id risus id enim aliquet tempor.
-        Mauris lacus nibh, efficitur sed malesuada quis, suscipit ac risus.
-        Morbi imperdiet lacinia nisl, quis sollicitudin tortor blandit non.
-        Praesent accumsan purus risus, rhoncus eleifend erat rhoncus sit amet.
-        Maecenas id molestie erat.
+  useEffect(() => {
+    dispatch(getHouses());
+  }, [dispatch]);
 
-      </p>
-    </main>
-  </div>
-);
+  return (
+    <div className="container d-flex flex-column flex-md-row">
+      <Aside />
+      <main className="ps-0 ps-md-5 flex-grow-1 pt-3">
+
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="carousel slide multi-item-carousel" id="theCarousel">
+                <div className="carousel-inner">
+                  {houses.map((item) => (
+                    <div className="col-md-4 mb-3 item" key={item.id}>
+                      <Link to={`${item.id}`}>
+                        <div className="card" id={item.id}>
+                          <img
+                            className="img-fluid"
+                            src={item.image_url}
+                            alt={item.name}
+                          />
+                          <div className="card-body">
+                            <h4 className="card-title">{item.name}</h4>
+                            <p className="card-text">
+                              {item.price}
+                              {' '}
+                              per month
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+                <a
+                  className="left carousel-control"
+                  href="#theCarousel"
+                  data-slide="prev"
+                >
+                  <i className="glyphicon glyphicon-chevron-left" />
+                </a>
+                <a
+                  className="right carousel-control"
+                  href="#theCarousel"
+                  data-slide="next"
+                >
+                  <i className="glyphicon glyphicon-chevron-right" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
 
 export default Houses;
