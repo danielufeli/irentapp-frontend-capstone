@@ -61,7 +61,7 @@ const HouseForm = () => {
         navigate('/');
 
       } catch (err) {
-       console.error('Failed to save the post', err);
+       return err;
       }
     }
   };
