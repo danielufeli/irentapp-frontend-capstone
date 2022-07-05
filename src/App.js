@@ -6,6 +6,7 @@ import AddReservation from './components/reservations/AddReservation';
 import Login from './components/login/login';
 import SignUp from './components/signup/signup';
 import HouseForm from './components/houseForm/houseForm';
+import HouseDetails from './components/houseDetails/houseDetails';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/reservations" element={<MyReservations />} />
         <Route path="/addreservation" element={<AddReservation />} />
         <Route path="/addHouse" element={<HouseForm />} />
+        <Route path="/houses:item.id" component={<HouseDetails />} />
       </Routes>
     </div>
   );
