@@ -6,7 +6,15 @@ const Aside = () => (
     <a href="https://www.google.com/">
       <img src={mainLogo} alt="logo" width="100" height="140" />
     </a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse w-100" id="navbarSupportedContent">
@@ -14,6 +22,10 @@ const Aside = () => (
         <li>
           <Link to="/">Houses</Link>
           {/* <a className="nav-link" aria-current="page" href="https://www.google.com/">Houses</a> */}
+        </li>
+        <li>
+          <Link to="/addHouse">Add House</Link>
+          {/* <a className="nav-link" href="https://www.google.com/">Add Reservations</a> */}
         </li>
         <li>
           <Link to="/reservations">My Reservations</Link>
@@ -30,7 +42,6 @@ const Aside = () => (
       </ul>
     </div>
   </aside>
-
 );
 
 export default Aside;
