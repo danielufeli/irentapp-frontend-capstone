@@ -1,14 +1,21 @@
 /* eslint-disable array-callback-return */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { allReservations } from './reservationsSlice';
+import { allReservations, fetchReservations } from './reservationsSlice';
 import { allHouses } from './houseSlice';
 import Aside from '../sidebar/sidebar';
 import './reservation.css';
 
 function MyReservations() {
+  const dispatch = useDispatch();
   const reservations = useSelector(allReservations);
   const houses = useSelector(allHouses);
+
+  useEffect(() => {
+    dispatch(fetchReservations());
+  }, []);
+
+  console.log(reservations);
 
   const dataBox = [];
   reservations.map((reservation) => {

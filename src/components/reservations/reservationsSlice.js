@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -5,11 +6,13 @@ const RESERVATIONS_URL = 'http://127.0.0.1:3000/api/v1/reservations';
 
 const initialState = {
   reservations: [],
+  status: null,
 };
 
 export const fetchReservations = createAsyncThunk('reservations/fetchReservations', async () => {
   try {
     const response = await axios.get(RESERVATIONS_URL);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
     return error.message;
@@ -24,12 +27,19 @@ const ReservationsSlice = createSlice({
       state.reservations.push(action.payload);
     },
   },
-  // extraReducers(builder) {
-  //   builder
-  //     .addCase(fetchReservations.pending, (state, action) => {
-  //       state.status = 'loading';
-  //     });
-  // },
+  extraReducers: {
+    [fetchReservations.fulfilled]: (state, { payload }) => {
+      state.reservations = payload;
+      state.status = 'success';
+    },
+    [fetchReservations.pending]: (state) => {
+      state.status = 'loading';
+    },
+    [fetchReservations.rejected]: (state) => {
+      state.reservations = [];
+      state.status = 'failed';
+    },
+  },
 });
 
 export const { reservationAdded } = ReservationsSlice.actions;
