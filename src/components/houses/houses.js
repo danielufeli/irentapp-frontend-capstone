@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getHouses } from '../../features/houses/housesState';
 import Aside from '../sidebar/sidebar';
 
 function Houses() {
   const dispatch = useDispatch();
-  const houses = useSelector((state) => state.houseList.items);
+  const houses = useSelector((state) => state.houses.houses);
 
   useEffect(() => {
     dispatch(getHouses());
@@ -23,22 +24,23 @@ function Houses() {
                 <div className="carousel-inner">
                   {houses.map((item) => (
                     <div className="col-md-4 mb-3 item" key={item.id}>
-                      <div className="card" id={item.id}>
-                        <img
-                          className="img-fluid"
-                          src={item.image_url}
-                          alt={item.name}
-                        />
-                        <div className="card-body">
-                          <h4 className="card-title">{item.name}</h4>
-                          <p className="card-text">
-                            {item.price}
-                            {' '}
-                            per month
-                          </p>
-                          <button type="button">More details</button>
+                      <Link to={`${item.id}`}>
+                        <div className="card" id={item.id}>
+                          <img
+                            className="img-fluid"
+                            src={item.image_url}
+                            alt={item.name}
+                          />
+                          <div className="card-body">
+                            <h4 className="card-title">{item.name}</h4>
+                            <p className="card-text">
+                              {item.price}
+                              {' '}
+                              per month
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   ))}
                 </div>

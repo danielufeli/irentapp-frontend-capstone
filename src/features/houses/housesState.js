@@ -16,9 +16,9 @@ export const addNewHouse = createAsyncThunk('houses/addNewHouse', async (obj) =>
 })
 
 export const housesSlice= createSlice({
-  name: 'gallery',
+  name: 'houses',
   initialState: {
-    items: [],
+    houses: [],
     isLoading: false
   
   },
@@ -28,7 +28,7 @@ export const housesSlice= createSlice({
   },
   
   [getHouses.fulfilled]: (state, action) =>{
-    state.items = action.payload;
+    state.houses = action.payload;
     state.isLoading = false;
   },
   
@@ -40,4 +40,7 @@ export const housesSlice= createSlice({
   
   });
   
+
+  export const selectHouseById = (state, houseId) => state.houses.houses.find((house) => house.id === houseId);
+
   export default housesSlice.reducer

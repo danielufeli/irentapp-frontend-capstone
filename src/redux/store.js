@@ -3,7 +3,7 @@ import housesReducer from '../features/houses/housesState';
 
 const store = configureStore({
   reducer: {
-    houseList: housesReducer,
+    houses: housesReducer,
   },
 });
 

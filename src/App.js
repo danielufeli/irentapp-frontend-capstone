@@ -18,7 +18,7 @@ function App() {
         <Route path="/reservations" element={<MyReservations />} />
         <Route path="/addreservation" element={<AddReservation />} />
         <Route path="/addHouse" element={<HouseForm />} />
-        <Route path="/houses:item.id" component={<HouseDetails />} />
+        <Route path="houses/:houseId" element={<HouseDetails />} />
       </Routes>
     </div>
   );
