@@ -1,42 +1,46 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
-import { nanoid } from '@reduxjs/toolkit';
+// import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import Aside from '../sidebar/sidebar';
-import { reservationAdded } from './reservationsSlice';
-import { allHouses } from './houseSlice';
+import { addNewReservation } from './reservationsSlice';
+// import { allHouses } from './houseSlice';
+import { getHouses } from '../../features/houses/housesState';
 import { allUsers } from './usersSlice';
 import './reservation.css';
 
 function AddReservation() {
+  const dispatch = useDispatch();
   const [houseId, setHouseId] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [userId, setUserId] = useState(1);
 
-  const houses = useSelector(allHouses);
+  // const houses = useSelector(allHouses);
   const users = useSelector(allUsers);
+  const houses = useSelector((state) => state.houses.houses);
 
   useEffect(() => {
     users.forEach((user) => setUserId(user.id));
-  }, []);
+    dispatch(getHouses());
+  }, [dispatch]);
 
   // console.log(houseId);
 
   // console.log(setUserId());
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const canReserve = houseId && startDate && endDate;
 
   function handleSubmit() {
     dispatch(
-      reservationAdded({
-        id: nanoid(),
+      addNewReservation({
         house_id: Number(houseId),
-        userId,
+        user_id: userId,
         startDate,
         endDate,
+        cost: 1000,
       }),
     );
     setStartDate('');

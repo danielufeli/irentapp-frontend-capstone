@@ -9,7 +9,7 @@ const store = configureStore({
     reservations: reservationsReducer,
     houses: housesReducer,
     users: usersReducer,
-  }
+  },
 });
 
 export default store;
