@@ -5,6 +5,8 @@ import MyReservations from './components/reservations/MyReservations';
 import AddReservation from './components/reservations/AddReservation';
 import Login from './components/login/login';
 import SignUp from './components/signup/signup';
+import HouseForm from './components/houseForm/houseForm';
+import HouseDetails from './components/houseDetails/houseDetails';
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/houses" element={<Houses />} />
         <Route path="/reservations" element={<MyReservations />} />
-        <Route path="/addreservation" element={<AddReservation />} />
+        <Route path="/add_reservation" element={<AddReservation />} />
+        <Route path="/addHouse" element={<HouseForm />} />
+        <Route path="houses/:houseId" element={<HouseDetails />} />
       </Routes>
     </div>
   );
