@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getHouses, deleteHouse } from '../../features/houses/housesState';
+import { getHouses, deleteHouse, selectAllHouses } from '../../features/houses/housesState';
 import Aside from '../sidebar/sidebar';
 
 function HouseDelete() {
   const dispatch = useDispatch();
-  const houses = useSelector((state) => state.houses.houses);
+  const houses = useSelector(selectAllHouses);
 
   useEffect(() => {
     dispatch(getHouses());
@@ -46,7 +46,7 @@ function HouseDelete() {
                             {' '}
                             <button
                               type="button"
-                              onClick={() => dispatch(deleteHouse(parseInt(item.id, 10)))}
+                              onClick={() => dispatch(deleteHouse(parseInt(item.id, 10))).unwrap()}
                             >
                               Delete
                             </button>
