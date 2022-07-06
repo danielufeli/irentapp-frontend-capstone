@@ -47,7 +47,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: 21px auto;
+  margin: 20px auto;
 }
 
 input {
@@ -63,7 +63,7 @@ select {
   border: 1px solid #000;
   outline: none;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 button {
