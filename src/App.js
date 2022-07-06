@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/houses" element={<Houses />} />
         <Route path="/reservations" element={<MyReservations />} />
-        <Route path="/addreservation" element={<AddReservation />} />
+        <Route path="/add_reservation" element={<AddReservation />} />
         <Route path="/addHouse" element={<HouseForm />} />
         <Route path="houses/:houseId" element={<HouseDetails />} />
         <Route path="delete" element={<HouseDelete />} />
