@@ -1,15 +1,22 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectHouseById } from '../../features/houses/housesState';
+import Modal from '../modal/Modal';
+// import reservationPopUp from '../reservations/reservationPopUp';
 
 import Aside from '../sidebar/sidebar';
 
 function HouseDetails() {
   const { houseId } = useParams();
+  const [showpopup, setShowpopup] = useState(false);
 
   const house = useSelector((state) => selectHouseById(state, Number(houseId)));
-  console.log(house);
+  // console.log(house);
 
+  // Here I will define a function to render a popup for reserving a house
+  console.log(showpopup);
+  // <reservationPopUp />;
   return (
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
@@ -45,10 +52,10 @@ function HouseDetails() {
               {house.capacity}
             </p>
           </div>
-
-          <button className="btn btn-primary" type="button">Add reservation</button>
+          <button className="btn btn-primary" type="button" onClick={() => setShowpopup(true)}>Add reservation</button>
           <button className="btn btn-primary" type="button">Delete House</button>
         </div>
+        { showpopup && <Modal />}
       </main>
     </div>
   );
