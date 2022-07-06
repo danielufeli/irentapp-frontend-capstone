@@ -22,7 +22,7 @@ export const fetchReservations = createAsyncThunk('reservations/fetchReservation
 export const addNewReservation = createAsyncThunk('reservations/addNewReservation', async (initialReservation) => {
   try {
     const response = await axios.post(RESERVATIONS_URL, initialReservation);
-    console.log(initialReservation);
+    // console.log(initialReservation);
     return response.data;
   } catch (error) {
     return error.message;
@@ -51,7 +51,7 @@ const ReservationsSlice = createSlice({
     },
     [addNewReservation.fulfilled]: (state, action) => {
       state.reservations.unshift(action.payload);
-      console.log(action.payload);
+      // console.log(action.payload);
     },
   },
 });

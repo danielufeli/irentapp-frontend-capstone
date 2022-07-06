@@ -4,8 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { allReservations, fetchReservations } from './reservationsSlice';
 import { getHouses } from '../../features/houses/housesState';
 
-// import { allHouses } from './houseSlice';
-
 import Aside from '../sidebar/sidebar';
 import './reservation.css';
 
@@ -14,14 +12,10 @@ function MyReservations() {
   const reservations = useSelector(allReservations);
   const houses = useSelector((state) => state.houses.houses);
 
-  // const houses = useSelector(allHouses);
-
   useEffect(() => {
     dispatch(fetchReservations());
     dispatch(getHouses());
   }, [dispatch]);
-
-  // console.log(houses);
 
   const dataBox = [];
   reservations.map((reservation) => {
