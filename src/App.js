@@ -7,6 +7,7 @@ import Login from './components/login/login';
 import SignUp from './components/signup/signup';
 import HouseForm from './components/houseForm/houseForm';
 import HouseDetails from './components/houseDetails/houseDetails';
+import HouseDelete from './components/houseDelete/houseDelete';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/addreservation" element={<AddReservation />} />
         <Route path="/addHouse" element={<HouseForm />} />
         <Route path="houses/:houseId" element={<HouseDetails />} />
+        <Route path="delete" element={<HouseDelete />} />
       </Routes>
     </div>
   );

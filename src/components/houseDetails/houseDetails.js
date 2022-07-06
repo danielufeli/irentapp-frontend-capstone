@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { selectHouseById } from '../../features/houses/housesState';
 
 import Aside from '../sidebar/sidebar';
@@ -45,9 +45,13 @@ function HouseDetails() {
               {house.capacity}
             </p>
           </div>
+          <p>
+            <Link to="/addreservation">Reserve</Link>
+          </p>
 
-          <button className="btn btn-primary" type="button">Add reservation</button>
-          <button className="btn btn-primary" type="button">Delete House</button>
+          <p>
+            <Link to="/delete">Delete House</Link>
+          </p>
         </div>
       </main>
     </div>

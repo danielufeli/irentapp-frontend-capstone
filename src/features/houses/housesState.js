@@ -15,6 +15,20 @@ export const addNewHouse = createAsyncThunk('houses/addNewHouse', async (obj) =>
 	return response.data;
 })
 
+export const deleteHouse = createAsyncThunk(
+  'houses/deleteHouse',
+  async (initialHouse) => {
+    const id  = initialHouse;
+    try {
+      const response = await axios.delete(`${HOUSES_URL}/${id}`);
+      if (response?.status === 200) return initialHouse;
+      return `${response?.status}: ${response?.statusText}`;
+    } catch (err) {
+      return err.message;
+    }
+  },
+);
+
 export const housesSlice= createSlice({
   name: 'houses',
   initialState: {
@@ -34,7 +48,13 @@ export const housesSlice= createSlice({
   
   [getHouses.rejected]: (state) => {
     state.isLoading = false
-  }
+  },
+
+  [addNewHouse .fulfilled]: (state, action) =>{
+    state.houses = action.payload;
+    state.isLoading = false;
+  },
+
   
   }
   

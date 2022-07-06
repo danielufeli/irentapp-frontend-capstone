@@ -58,7 +58,7 @@ const HouseForm = () => {
         setCity('');
         setUserId(0);
         setImageUrl('');
-        navigate('/');
+        navigate('/houses');
 
       } catch (err) {
        return err;

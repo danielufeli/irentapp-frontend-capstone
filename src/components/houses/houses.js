@@ -1,13 +1,22 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getHouses } from '../../features/houses/housesState';
+import { getHouses, selectAllHouses } from '../../features/houses/housesState-02';
 import Aside from '../sidebar/sidebar';
 
 function Houses() {
   const dispatch = useDispatch();
-  const houses = useSelector((state) => state.houses.houses);
+  const houses = useSelector(selectAllHouses);
 
+  // const houseStatus = useSelector((state) => state.house.status);
+
+  // useEffect(() => {
+  //   if (houseStatus === 'idle') {
+  //     dispatch(getHouses());
+  //   }
+  // }, [houseStatus, dispatch]);
+
+  console.log(houses);
   useEffect(() => {
     dispatch(getHouses());
   }, [dispatch]);
