@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Aside from '../sidebar/sidebar';
 import { addNewReservation } from './reservationsSlice';
 import { getHouses } from '../../features/houses/housesState';
-// import { selectHouseById } from '../../features/houses/housesState'; // New Import
 import { allUsers } from './usersSlice';
 import './reservation.css';
 
@@ -14,8 +13,6 @@ function AddReservation() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [userId, setUserId] = useState(1);
-
-  // const house = useSelector((state) => selectHouseById(state, Number(houseId))); // New import
 
   const users = useSelector(allUsers);
   const houses = useSelector((state) => state.houses.houses);

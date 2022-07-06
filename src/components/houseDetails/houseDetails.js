@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectHouseById } from '../../features/houses/housesState';
 import Modal from '../modal/Modal';
-// import reservationPopUp from '../reservations/reservationPopUp';
 
 import Aside from '../sidebar/sidebar';
 
@@ -12,11 +11,7 @@ function HouseDetails() {
   const [showpopup, setShowpopup] = useState(false);
 
   const house = useSelector((state) => selectHouseById(state, Number(houseId)));
-  // console.log(house);
 
-  // Here I will define a function to render a popup for reserving a house
-  console.log(showpopup);
-  // <reservationPopUp />;
   return (
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
