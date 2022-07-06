@@ -8,7 +8,6 @@ function HouseDetails() {
   const { houseId } = useParams();
 
   const house = useSelector((state) => selectHouseById(state, Number(houseId)));
-  console.log(house);
 
   return (
     <div className="container d-flex flex-column flex-md-row">
