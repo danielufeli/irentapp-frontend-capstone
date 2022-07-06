@@ -17,6 +17,7 @@ export default function Modal() {
   const [houseid, setHouseId] = useState(houseId);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  const [city, setCity] = useState(house.city);
   const [userId, setUserId] = useState(1);
 
   useEffect(() => {
@@ -52,6 +53,15 @@ export default function Modal() {
             name="nameContent"
             value={house.name}
             onChange={(e) => setHouseId(e.target.value)}
+          />
+
+          <label htmlFor="cityContent">City: </label>
+          <input
+            id="cityContent"
+            name="cityContent"
+            value={city}
+            type="text"
+            onChange={(e) => setCity(e.target.value)}
           />
 
           <label htmlFor="startDateContent">Start Date: </label>
