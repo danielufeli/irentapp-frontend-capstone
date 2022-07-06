@@ -1,14 +1,16 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { selectHouseById } from '../../features/houses/housesState';
+import Modal from '../modal/Modal';
 
 import Aside from '../sidebar/sidebar';
 
 function HouseDetails() {
   const { houseId } = useParams();
+  const [showpopup, setShowpopup] = useState(false);
 
   const house = useSelector((state) => selectHouseById(state, Number(houseId)));
-  console.log(house);
 
   return (
     <div className="container d-flex flex-column flex-md-row">
@@ -52,7 +54,10 @@ function HouseDetails() {
           <p>
             <Link to="/delete">Delete House</Link>
           </p>
+          <button className="btn btn-primary" type="button" onClick={() => setShowpopup(true)}>Add reservation</button>
+          <button className="btn btn-primary" type="button">Delete House</button>
         </div>
+        { showpopup && <Modal />}
       </main>
     </div>
   );

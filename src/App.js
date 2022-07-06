@@ -21,6 +21,7 @@ function App() {
         <Route path="/addHouse" element={<HouseForm />} />
         <Route path="houses/:houseId" element={<HouseDetails />} />
         <Route path="delete" element={<HouseDelete />} />
+        {/* <Route path="add_reservation" element={<AddReservation />} /> */}
       </Routes>
     </div>
   );
