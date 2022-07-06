@@ -1,14 +1,18 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { getHouses } from '../../features/houses/housesState';
 import Aside from '../sidebar/sidebar';
 
 function Houses() {
   const dispatch = useDispatch();
   const houses = useSelector((state) => state.houseList.items);
+  const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getHouses());
+    if (!user) navigate('/');
   }, [dispatch]);
 
   return (
