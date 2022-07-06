@@ -21,7 +21,6 @@ const Aside = () => (
       <ul className="navbar-nav w-100 d-flex flex-md-column text-center text-md-end">
         <li>
           <Link to="/">Houses</Link>
-          {/* <a className="nav-link" aria-current="page" href="https://www.google.com/">Houses</a> */}
         </li>
         <li>
           <Link to="/addHouse">Add House</Link>
@@ -29,15 +28,12 @@ const Aside = () => (
         </li>
         <li>
           <Link to="/reservations">My Reservations</Link>
-          {/* <a className="nav-link" href="https://www.google.com/">My Reservations</a> */}
         </li>
         <li>
-          <Link to="/addreservation">Add Reservation</Link>
-          {/* <a className="nav-link" href="https://www.google.com/">Add Reservations</a> */}
+          <Link to="/add_reservation">Add Reservation</Link>
         </li>
         <li>
           <Link to="/logout">Log Out</Link>
-          {/* <a className="nav-link" href="https://www.google.com/">Log out</a> */}
         </li>
       </ul>
     </div>

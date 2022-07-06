@@ -73,8 +73,8 @@ const HouseForm = () => {
       <div>
         <h1>Add House</h1>
         <form>
-          <div class="mb-3">
-            <label htmlFor="name" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">
               Name
               <input
                 id="name"
@@ -85,8 +85,8 @@ const HouseForm = () => {
             </label>
           </div>
 
-          <div class="mb-3">
-            <label htmlFor="city" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="city" className="form-label">
               City
               <input
                 id="city"
@@ -96,8 +96,8 @@ const HouseForm = () => {
               />
             </label>
           </div>
-          <div class="mb-3">
-            <label htmlFor="description" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="description" className="form-label">
               Description
               <input
                 type="textarea"
@@ -109,8 +109,8 @@ const HouseForm = () => {
               />
             </label>
           </div>
-          <div class="mb-3">
-            <label htmlFor="image_url" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="image_url" className="form-label">
               Image
               <input
                 id="image_url"
@@ -120,8 +120,8 @@ const HouseForm = () => {
               />
             </label>
           </div>
-          <div class="mb-3">
-            <label htmlFor="price" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="price" className="form-label">
               Price
               <input
                 id="price"
@@ -132,8 +132,8 @@ const HouseForm = () => {
             </label>
           </div>
 
-          <div class="mb-3">
-            <label htmlFor="capacity" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="capacity" className="form-label">
               Capacity
               <input
                 id="capacity"
@@ -143,8 +143,8 @@ const HouseForm = () => {
               />
             </label>
           </div>
-          <div class="mb-3">
-            <label htmlFor="user_id" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="user_id" className="form-label">
               User Id
               <input
                 id="user_id"
@@ -156,7 +156,7 @@ const HouseForm = () => {
           </div>
 
           <div>
-            <button type="button" onClick={onSubmitHouse} disabled={!canSave} class="btn btn-primary">
+            <button type="button" onClick={onSubmitHouse} disabled={!canSave} className="btn btn-primary">
               Add House
             </button>
           </div>
