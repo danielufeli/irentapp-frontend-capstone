@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectHouseById } from '../../features/houses/housesState';
+import Modal from '../modal/Modal';
 
 import Aside from '../sidebar/sidebar';
 
 function HouseDetails() {
   const { houseId } = useParams();
+  const [showpopup, setShowpopup] = useState(false);
 
   const house = useSelector((state) => selectHouseById(state, Number(houseId)));
 
@@ -44,10 +47,10 @@ function HouseDetails() {
               {house.capacity}
             </p>
           </div>
-
-          <button className="btn btn-primary" type="button">Add reservation</button>
+          <button className="btn btn-primary" type="button" onClick={() => setShowpopup(true)}>Add reservation</button>
           <button className="btn btn-primary" type="button">Delete House</button>
         </div>
+        { showpopup && <Modal />}
       </main>
     </div>
   );
