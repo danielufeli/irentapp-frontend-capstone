@@ -1,28 +1,59 @@
-const URL = 'http://127.0.0.1:3000/users';
+import axios from '../../api/axios';
+
+const API_URL_REG = '/users';
+const LOGOUT_URL = '/users/sign_out';
+const LOGIN_URL = '/users/sign_in';
 
 // Register user
 const register = async (userData) => {
-  const response = await fetch(URL, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(userData),
-  });
-  const data = await response.json();
+  const response = await axios.post(API_URL_REG, userData);
 
-  console.log(data);
-
-  if (data) {
-    localStorage.setItem('user', JSON.stringify(data.user))
+  if (response.data.user) {
+    const { user } = response.data;
+    user.token = response.headers.authorization;
+    axios.defaults.headers.common.Authorization = response.headers.authorization;
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
-  return data;
+  return response.data;
+};
+
+// Login user
+const login = async (userData) => {
+  const response = await axios.post(LOGIN_URL, userData);
+
+  if (response.data.user !== undefined) {
+    const { user } = response.data;
+    user.token = response.headers.authorization;
+    axios.defaults.headers.common.Authorization = response.headers.authorization;
+    localStorage.setItem('user', JSON.stringify(user));
+  }
+
+  return response.data;
+};
+
+// Logout User
+
+const logout = async (user) => {
+  const { token } = user;
+
+  if (token) {
+    const config = {
+      headers: {
+        authorization: token,
+      },
+    };
+    localStorage.removeItem('user');
+    axios.defaults.headers.common.Authorization = null;
+    await axios.delete(LOGOUT_URL, config);
+  }
+  return user;
 };
 
 const authService = {
   register,
+  login,
+  logout,
 };
 
 export default authService;
