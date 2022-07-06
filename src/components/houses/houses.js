@@ -1,22 +1,25 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import Carousel from 'react-multi-carousel';
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import Carousel from "react-multi-carousel";
 import {
   getHouses,
   selectAllHouses,
   getHousesStatus,
-} from '../../features/houses/housesState';
-import 'react-multi-carousel/lib/styles.css';
-import Aside from '../sidebar/sidebar';
+} from "../../features/houses/housesState";
+import "react-multi-carousel/lib/styles.css";
+import Aside from "../sidebar/sidebar";
 
 function Houses() {
   const dispatch = useDispatch();
   const houses = useSelector(selectAllHouses);
+  const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (getHousesStatus === 'idle' || 'succeeded') {
+    if (getHousesStatus === "idle" || "succeeded") {
       dispatch(getHouses());
+      if (!user) navigate("/");
     }
   }, [getHousesStatus, dispatch]);
 
@@ -57,11 +60,7 @@ function Houses() {
                     />
                     <div className="card-body">
                       <h4 className="card-title">{item.name}</h4>
-                      <p className="card-text">
-                        {item.price}
-                        {' '}
-                        per month
-                      </p>
+                      <p className="card-text">{item.price} per month</p>
                     </div>
                   </div>
                 </Link>
