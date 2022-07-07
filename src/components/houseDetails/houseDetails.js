@@ -19,7 +19,6 @@ function HouseDetails() {
         <div className="card">
           <div>
             <h2>
-              House
               {house.name}
             </h2>
           </div>
