@@ -47,15 +47,12 @@ function HouseDetails() {
               {house.capacity}
             </p>
           </div>
-          <p>
-            <Link to="/addreservation">Reserve</Link>
-          </p>
 
           <p>
-            <Link to="/delete">Delete House</Link>
+            <Link to="/delete" className="btn btn-primary">Delete House</Link>
           </p>
           <button className="btn btn-primary" type="button" onClick={() => setShowpopup(true)}>Add reservation</button>
-          <button className="btn btn-primary" type="button">Delete House</button>
+
         </div>
         { showpopup && <Modal />}
       </main>
