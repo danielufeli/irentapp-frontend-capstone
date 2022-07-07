@@ -23,8 +23,6 @@ function AddReservation() {
     dispatch(getHouses());
   }, [dispatch]);
 
-  // console.log(user.id);
-
   const canReserve = houseId && startDate && endDate;
 
   function handleSubmit() {

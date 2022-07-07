@@ -17,9 +17,9 @@ export const fetchReservations = createAsyncThunk('reservations/fetchReservation
     if (user.token) {
       const config = {
         headers: {
-          Authorization: user.token
-        }
-      }
+          Authorization: user.token,
+        },
+      };
       const response = await axios.get(RESERVATIONS_URL, config);
       loadedReservations = response.data;
     }
@@ -35,9 +35,9 @@ export const addNewReservation = createAsyncThunk('reservations/addNewReservatio
     if (user.token) {
       const config = {
         headers: {
-          Authorization: user.token
-        }
-      }
+          Authorization: user.token,
+        },
+      };
       const response = await axios.post(RESERVATIONS_URL, initialReservation, config);
       addedReservation = response.data;
     }

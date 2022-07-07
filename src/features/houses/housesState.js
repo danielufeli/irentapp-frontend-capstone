@@ -3,27 +3,25 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const HOUSES_URL = "http://127.0.0.1:3000/api/v1/houses";
+let user = JSON.parse(localStorage.getItem('user'))
+let config;
+if (user !== undefined) {
+  config = {
+    headers: {
+      Authorization: user.token,
+    },
+  };
+}
 
 export const getHouses = createAsyncThunk("houses/getHouses", async () => {
-  let user = JSON.parse(localStorage.getItem('user'))
-  let loadedHouses;
-  if (user !== undefined) {
-    const config = {
-      headers: {
-        Authorization: user.token,
-      },
-    };
-    const response = await axios.get(HOUSES_URL, config);
-    loadedHouses = response.data;
-  }
-
-  return loadedHouses;
+  const response = await axios.get(HOUSES_URL, config);
+  return response.data;
 });
 
 export const addNewHouse = createAsyncThunk(
   "houses/addNewHouse",
   async (obj) => {
-    const response = await axios.post(HOUSES_URL, obj);
+    const response = await axios.post(HOUSES_URL, obj, config);
     return response.data;
   }
 );
@@ -33,7 +31,7 @@ export const deleteHouse = createAsyncThunk(
   async (initialHouse) => {
     const id = initialHouse;
     try {
-      const response = await axios.delete(`${HOUSES_URL}/${id}`);
+      const response = await axios.delete(`${HOUSES_URL}/${id}`, config);
       if (response?.status === 200 || 202 || 204) return initialHouse;
       return `${response?.status}: ${response?.statusText}`;
     } catch (err) {

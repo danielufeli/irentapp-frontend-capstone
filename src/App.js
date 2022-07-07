@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     // Load JWT from local Storage
     const user = JSON.parse(localStorage.getItem('user'));
-    console.log(user);
+
     const cookieExists = user !== 'undefined' && user !== null;
     if (cookieExists) {
       const loggedinuser = JSON.parse(localStorage.getItem('user'));
