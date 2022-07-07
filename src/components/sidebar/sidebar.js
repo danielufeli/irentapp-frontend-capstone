@@ -33,7 +33,7 @@ const Aside = () => {
       <div className="collapse navbar-collapse w-100" id="navbarSupportedContent">
         <ul className="navbar-nav w-100 d-flex flex-md-column text-center text-md-end">
           <li>
-            <Link to="/">Houses</Link>
+            <Link to="/houses">Houses</Link>
           </li>
           <li>
             <Link to="/addHouse">Add House</Link>

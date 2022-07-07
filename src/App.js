@@ -1,6 +1,4 @@
 import './App.css';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import Houses from './components/houses/houses';
 import MyReservations from './components/reservations/MyReservations';
@@ -10,24 +8,8 @@ import SignUp from './components/signup/signup';
 import HouseForm from './components/houseForm/houseForm';
 import HouseDetails from './components/houseDetails/houseDetails';
 import HouseDelete from './components/houseDelete/houseDelete';
-import { authuser } from './features/auth/authSlice';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    // Load JWT from local Storage
-    const user = JSON.parse(localStorage.getItem('user'));
-
-    const cookieExists = user !== 'undefined' && user !== null;
-    if (cookieExists) {
-      const loggedinuser = JSON.parse(localStorage.getItem('user'));
-      const authTokenExists = loggedinuser !== 'undefined' && loggedinuser !== null;
-      if (authTokenExists) {
-        dispatch(authuser(user));
-      }
-    }
-  }, [dispatch]);
-
   return (
     <div className="App">
       <Routes>
