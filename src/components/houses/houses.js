@@ -8,6 +8,7 @@ import {
   getHousesStatus,
 } from '../../features/houses/housesState';
 import 'react-multi-carousel/lib/styles.css';
+import './houses.css';
 import Aside from '../sidebar/sidebar';
 
 function Houses() {
@@ -48,7 +49,14 @@ function Houses() {
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1 pt-3">
         <div className="container">
-          <Carousel responsive={responsive} infinite>
+          <Carousel
+            responsive={responsive}
+            infinite
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={['tablet', 'mobile']}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
             {houses.map((item) => (
               <div className="card" key={item.id}>
                 <Link to={`${item.id}`}>
