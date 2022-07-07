@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# iRent App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> #### A Web application that allows users to signin and make reservations for a house of their choice
 
-## Available Scripts
+> Check the [Back-end Repository](https://github.com/danielufeli/irentapp-final-capstone) of this project!
 
-In the project directory, you can run:
+> #### Allows users:
 
-### `npm start`
+- To Signup and Login.
+- To Reserve a house
+- Display all reservations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> #### Allows admins:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- To Login.
+- To Add a new hotel.
+- To Delete a hotel.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Front-end
 
-### `npm run build`
+- React.js
+- Redux (@redux/toolkit)
+- Bootstrap5
+- Module CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Back-end
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Ruby on Rails
+- PostgreSQL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Additional Used
 
-### `npm run eject`
+- JWT
+- Jest
+- Css
+- KanbanBoard
+- Linters
+- Gitflow
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Link to API
+The API for this project was built with Ruby on Rails. For more information and the documentation, [check out the repository on Github](https://github.com/danielufeli/irentapp-final-capstone)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Live Demo 🌐
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### [iRent Link]()
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+To get a local copy up and running follow these simple example steps.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+git clone git@github.com:Yothu/reservify-front-end.git 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Then 
+```sh
+cd /irentapp-frontend-capstone
+```
 
-### Code Splitting
+To install packages
+```sh 
+npm install
+``` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To Run the app
+```sh 
+npm start
+```
 
-### Analyzing the Bundle Size
+To Run the test
+```sh 
+npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Collaborators
+👤 **Jeff Kayombo**
 
-### Making a Progressive Web App
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@JEFFKAY16](https://github.com/JEFFKAY16)
+<hr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+👤 **Daniel Ufeli**
 
-### Advanced Configuration
+Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@danielufeli](https://github.com/danielufeli)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ 👤 **David Lafontant**
 
-### Deployment
+Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@david-lafontant](https://github.com/david-lafontant)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check the [issues page](../../issues/).
+
+## Acknowledgments
+
+Original design [Vespa](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign/modules/173005583) by [Murat Korkmaz](https://www.behance.net/muratk) on [Behance](https://www.behance.net/)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
