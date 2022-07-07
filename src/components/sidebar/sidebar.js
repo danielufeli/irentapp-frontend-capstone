@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import mainLogo from '../../images/mainLogo.gif';
+import mainLogo from '../../images/logo.png';
 import { logout, reset } from '../../features/auth/authSlice';
 import './sidebar.css';
 
