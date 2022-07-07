@@ -157,8 +157,8 @@ const SignUp = () => {
             </label>
           </div>
           <div className="d-grid mw-md-100">
-            <button type="submit" className="btn btn-primary">
-              Sign Up
+            <button type="submit" className="btn btn-primary" disabled={isLoading}>
+              {isLoading ? 'Loading' : 'Sign Up'}
             </button>
           </div>
           <p className="forgot-password text-right">
