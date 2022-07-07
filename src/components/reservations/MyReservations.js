@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { allReservations, fetchReservations } from './reservationsSlice';
 import { getHouses } from '../../features/houses/housesState';
-
+// import authSlice from '../../features/auth/authSlice';
 import Aside from '../sidebar/sidebar';
 import './reservation.css';
 

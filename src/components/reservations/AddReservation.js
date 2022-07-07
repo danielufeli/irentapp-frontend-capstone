@@ -4,23 +4,26 @@ import { useDispatch, useSelector } from 'react-redux';
 import Aside from '../sidebar/sidebar';
 import { addNewReservation } from './reservationsSlice';
 import { getHouses } from '../../features/houses/housesState';
-import { allUsers } from './usersSlice';
+// import { allUsers } from './usersSlice';
 import './reservation.css';
 
 function AddReservation() {
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
   const [houseId, setHouseId] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [userId, setUserId] = useState(1);
+  const [userId, setUserId] = useState(user.id);
 
-  const users = useSelector(allUsers);
+  // const users = useSelector(allUsers);
   const houses = useSelector((state) => state.houses.houses);
 
   useEffect(() => {
-    users.forEach((user) => setUserId(user.id));
+    setUserId(user.id);
     dispatch(getHouses());
   }, [dispatch]);
+
+  // console.log(user.id);
 
   const canReserve = houseId && startDate && endDate;
 
