@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import mainLogo from '../../images/mainLogo.gif';
 import { logout, reset } from '../../features/auth/authSlice';
+import './sidebar.css';
 
 const Aside = () => {
   const dispatch = useDispatch();
