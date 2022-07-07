@@ -48,7 +48,7 @@ function Houses() {
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1 pt-3">
         <div className="container">
-          <Carousel responsive={responsive} infinite={true}>
+          <Carousel responsive={responsive} infinite>
             {houses.map((item) => (
               <div className="card" key={item.id}>
                 <Link to={`${item.id}`}>
