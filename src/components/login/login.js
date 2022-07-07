@@ -107,14 +107,18 @@ const Login = () => {
                       </label>
                     </div>
                     <div className="d-grid">
-                      <button type="submit" className="btn btn-outline-dark btn-login text-uppercase fw-bold">
-                        Sign in
+                      <button
+                        type="submit"
+                        className="btn btn-outline-dark btn-login text-uppercase fw-bold"
+                        disabled={isLoading}
+                      >
+                        {isLoading ? 'Loading' : 'Sign in'}
                       </button>
                     </div>
                     <hr className="my-4" />
                     <div className="d-grid mb-2">
                       <Link to="/signup" className="btn btn-warning btn-login text-uppercase fw-bold">
-                        { isLoading ? 'Loading' : 'Sign Up'}
+                        Sign Up
                       </Link>
                     </div>
                   </form>
