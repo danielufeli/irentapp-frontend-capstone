@@ -8,7 +8,7 @@ let config;
 if (user !== undefined) {
   config = {
     headers: {
-      Authorization: user.token,
+      Authorization: user && user.token,
     },
   };
 }

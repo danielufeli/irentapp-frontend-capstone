@@ -3,25 +3,23 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './Modal.css';
-import { allUsers } from '../reservations/usersSlice';
 import { selectHouseById } from '../../features/houses/housesState';
 import { addNewReservation } from '../reservations/reservationsSlice';
 
 export default function Modal() {
   const { houseId } = useParams();
   const house = useSelector((state) => selectHouseById(state, Number(houseId)));
-
-  const users = useSelector(allUsers);
+  const { user } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
   const [houseid, setHouseId] = useState(houseId);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [city, setCity] = useState(house.city);
-  const [userId, setUserId] = useState(1);
+  const [userId, setUserId] = useState(user.houseId);
 
   useEffect(() => {
-    users.forEach((user) => setUserId(user.id));
+    setUserId(user.id);
   }, [dispatch]);
 
   function handleSubmit() {
