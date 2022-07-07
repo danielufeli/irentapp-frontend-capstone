@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Aside from '../sidebar/sidebar';
 
@@ -8,6 +8,7 @@ import { addNewHouse } from '../../features/houses/housesState';
 
 const HouseForm = () => {
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
 
   const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
@@ -22,9 +23,12 @@ const HouseForm = () => {
   const onDescriptionChanged = (e) => setDescription(e.target.value);
   const onCapacityChanged = (e) => setCapacity(e.target.value);
   const onCityChanged = (e) => setCity(e.target.value);
-  const onUserIdChanged = (e) => setUserId(e.target.value);
+  // const onUserIdChanged = (e) => setUserId(e.target.value);
   const onImageUrlChanged = (e) => setImageUrl(e.target.value);
   const navigate = useNavigate();
+  useEffect(() => {
+    setUserId(user.id);
+  }, []);
 
   const canSave = [
     name,
@@ -140,17 +144,6 @@ const HouseForm = () => {
                 type="number"
                 placeholder="Number of people"
                 onChange={onCapacityChanged}
-              />
-            </label>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="user_id" className="form-label">
-              User Id
-              <input
-                id="user_id"
-                type="number"
-                placeholder="user_id"
-                onChange={onUserIdChanged}
               />
             </label>
           </div>
