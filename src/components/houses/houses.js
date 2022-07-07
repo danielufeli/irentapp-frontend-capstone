@@ -48,11 +48,11 @@ function Houses() {
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1 pt-3">
         <div className="container">
-          <Carousel responsive={responsive}>
+          <Carousel responsive={responsive} infinite={true}>
             {houses.map((item) => (
-              <div className="col-md-4 mb-3 item" key={item.id}>
+              <div className="card" key={item.id}>
                 <Link to={`${item.id}`}>
-                  <div className="card" id={item.id}>
+                  <div id={item.id}>
                     <img
                       className="img-fluid"
                       src={item.image_url}
