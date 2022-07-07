@@ -5,8 +5,19 @@ import axios from "axios";
 const HOUSES_URL = "http://127.0.0.1:3000/api/v1/houses";
 
 export const getHouses = createAsyncThunk("houses/getHouses", async () => {
-  const response = await axios.get(HOUSES_URL);
-  return response.data;
+  let user = JSON.parse(localStorage.getItem('user'))
+  let loadedHouses;
+  if (user !== undefined) {
+    const config = {
+      headers: {
+        Authorization: user.token,
+      },
+    };
+    const response = await axios.get(HOUSES_URL, config);
+    loadedHouses = response.data;
+  }
+
+  return loadedHouses;
 });
 
 export const addNewHouse = createAsyncThunk(

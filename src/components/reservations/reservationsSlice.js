@@ -9,10 +9,21 @@ const initialState = {
   status: null,
 };
 
+const user = JSON.parse(localStorage.getItem('user'));
+
 export const fetchReservations = createAsyncThunk('reservations/fetchReservations', async () => {
   try {
-    const response = await axios.get(RESERVATIONS_URL);
-    return response.data;
+    let loadedReservations;
+    if (user.token) {
+      const config = {
+        headers: {
+          Authorization: user.token
+        }
+      }
+      const response = await axios.get(RESERVATIONS_URL, config);
+      loadedReservations = response.data;
+    }
+    return loadedReservations;
   } catch (error) {
     return error.message;
   }
@@ -20,8 +31,17 @@ export const fetchReservations = createAsyncThunk('reservations/fetchReservation
 
 export const addNewReservation = createAsyncThunk('reservations/addNewReservation', async (initialReservation) => {
   try {
-    const response = await axios.post(RESERVATIONS_URL, initialReservation);
-    return response.data;
+    let addedReservation;
+    if (user.token) {
+      const config = {
+        headers: {
+          Authorization: user.token
+        }
+      }
+      const response = await axios.post(RESERVATIONS_URL, initialReservation, config);
+      addedReservation = response.data;
+    }
+    return addedReservation;
   } catch (error) {
     return error.message;
   }

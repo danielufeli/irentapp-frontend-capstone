@@ -3,6 +3,7 @@ import axios from '../../api/axios';
 const API_URL_REG = '/users';
 const LOGOUT_URL = '/users/sign_out';
 const LOGIN_URL = '/users/sign_in';
+const AUTH_URL = '/user-data';
 
 // Register user
 const register = async (userData) => {
@@ -50,10 +51,30 @@ const logout = async (user) => {
   return user;
 };
 
+const authUser = async (userLocal) => {
+  const { token } = userLocal;
+
+  if (token) {
+    const config = {
+      headers: {
+        Authorization: token,
+      },
+    };
+    const response = await axios.get(AUTH_URL, config);
+    if (response.data.user !== undefined) {
+      const { user } = response.data;
+      user.token = response.headers.authorization;
+      axios.defaults.headers.common.Authorization = response.headers.authorization;
+    }
+  }
+  return userLocal;
+};
+
 const authService = {
   register,
   login,
   logout,
+  authUser,
 };
 
 export default authService;
