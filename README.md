@@ -44,14 +44,14 @@ The API for this project was built with Ruby on Rails. For more information and 
 
 ## Live Demo 🌐
 
-### [iRent Link]()
+### [iRent Link](https://blooming-spire-78513.herokuapp.com/)
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ```sh
-git clone git@github.com:Yothu/reservify-front-end.git 
+git clone git@github.com:danielufeli/irentapp-frontend-capstone.git
 ```
 
 Then 
