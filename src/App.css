@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  width: 100%;
+  background-color: #fff;
+}
+
+.more-bg {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.display-out form {
+  width: 100%;
+}
+
+/* main {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.login_bg {
+  background: url(/public/login_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:visited {
+  background-color: #ffb701 !important;
+}
+
+.details {
+  width: 800px;
+  height: 100%;
+}
+
+.details .img-hold {
+  width: 800px;
+  height: 400px;
+}
+
+.details img {
+  width: 100%;
+}
+
+.details .card-bod {
+  width: 100%;
+  padding: 10px;
+}
+
+.card-text {
+  font-size: 15px;;
+}
+
+.card-text-money {
+  font-weight: bold;
+}
+
+span {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin: 10px auto;
+}
+
+.same-size {
+  width: 200px;
+} */

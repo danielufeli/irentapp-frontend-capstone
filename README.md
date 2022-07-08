@@ -1,56 +1,98 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# iRent App
 
-# Project Name
+> #### A Web application that allows users to signin and make reservations for a house of their choice
 
-> Description the project.
+> Check the [Back-end Repository](https://github.com/danielufeli/irentapp-final-capstone) of this project!
 
+> #### Allows users:
+
+- To Signup and Login.
+- To Reserve a house
+- Display all reservations
+
+> #### Allows admins:
+
+- To Login.
+- To Add a new hotel.
+- To Delete a hotel.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+> Front-end
 
-## Live Demo (if available)
+- React.js
+- Redux (@redux/toolkit)
+- Bootstrap5
+- Module CSS
 
-[Live Demo Link](https://livedemo.com)
+> Back-end
 
+- Ruby on Rails
+- PostgreSQL
+
+## Additional Used
+
+- JWT
+- Jest
+- Css
+- KanbanBoard
+- Linters
+- Gitflow
+
+## Link to API
+The API for this project was built with Ruby on Rails. For more information and the documentation, [check out the repository on Github](https://github.com/danielufeli/irentapp-final-capstone)
+
+## Live Demo 🌐
+
+### [iRent Link](https://blooming-spire-78513.herokuapp.com/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+```sh
+git clone git@github.com:danielufeli/irentapp-frontend-capstone.git
+```
 
-### Setup
+Then 
+```sh
+cd /irentapp-frontend-capstone
+```
 
-### Install
+To install packages
+```sh 
+npm install
+``` 
 
-### Usage
+To Run the app
+```sh 
+npm start
+```
 
-### Run tests
+To Run the test
+```sh 
+npm run test
+```
 
-### Deployment
+## Collaborators
+👤 **Jeff Kayombo**
 
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@JEFFKAY16](https://github.com/JEFFKAY16)
+<hr>
 
+👤 **Daniel Ufeli**
 
-## Authors
+Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@danielufeli](https://github.com/danielufeli)
 
-👤 **Author1**
+ 👤 **David Lafontant**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@david-lafontant](https://github.com/david-lafontant)
 
 ## 🤝 Contributing
 
@@ -58,15 +100,13 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
+## Acknowledgments
+
+Original design [Vespa](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign/modules/173005583) by [Murat Korkmaz](https://www.behance.net/muratk) on [Behance](https://www.behance.net/)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
