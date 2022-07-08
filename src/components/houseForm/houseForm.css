@@ -1,7 +1,7 @@
 .page-content {
-  width: 100%;
-  margin: 0 0;
-  background: #5eb2b3;
+  width: 75%;
+  margin: 0 auto;
+  background: #fff;
   right: 0;
   display: flex;
   display: -webkit-flex;
@@ -18,19 +18,20 @@
 }
 
 .form-v5-content {
-  background: #fff;
+  background: #5eb2b3;
   width: 670px;
   border-radius: 8px;
   -o-border-radius: 8px;
   -ms-border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  margin: 75px 0;
   font-family: 'Roboto', sans-serif;
   color: #333;
   font-weight: 400;
   position: relative;
   font-size: 18px;
+  overflow-y: scroll;
+  height: 94vh;
 }
 
 .form-v5-content .form-detail {

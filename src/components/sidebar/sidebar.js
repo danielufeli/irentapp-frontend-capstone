@@ -17,7 +17,7 @@ const Aside = () => {
   return (
     <aside className="navbar navbar-expand-md navbar-light d-flex flex-md-column">
       <a href="https://www.google.com/">
-        <img src={mainLogo} alt="logo" width="100" height="140" />
+        <img src={mainLogo} alt="logo" width="200" height="200" />
       </a>
       <button
         className="navbar-toggler"

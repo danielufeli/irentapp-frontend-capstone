@@ -16,17 +16,17 @@ function HouseDetails() {
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1 p-3">
-        <div className="card details">
-          <div>
-            <h2>
-              {house.name}
-            </h2>
-          </div>
+        <div className="card cardsss details">
           <div className="img-hold">
             <img src={house.image_url} alt={house.name} className="img-fluid" />
           </div>
 
           <div className="card-bod">
+            <div clasName="cardss">
+              <h4>
+                {house.name}
+              </h4>
+            </div>
             <p className="card-text-money">
               $
               {house.price}
