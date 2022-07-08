@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const HOUSES_URL = "http://127.0.0.1:3000/api/v1/houses";
+const HOUSES_URL = "https://fast-lowlands-73397.herokuapp.com/api/v1/houses";
 const user = JSON.parse(localStorage.getItem('user'))
 const config = { headers: { Authorization: user && user.token } };
 

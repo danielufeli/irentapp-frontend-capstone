@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const RESERVATIONS_URL = 'http://127.0.0.1:3000/api/v1/reservations';
+const RESERVATIONS_URL = 'https://fast-lowlands-73397.herokuapp.com/api/v1/reservations';
 
 const initialState = {
   reservations: [],

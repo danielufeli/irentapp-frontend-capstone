@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 
-const DisplayAlert = ({ alert: { message, status, show } }) => (
+const DisplayAlert = ({ alert: { message, show, status } }) => (
   <>
     {show && (
       <div className={`alert ${status}`} role="alert">
@@ -13,10 +13,10 @@ const DisplayAlert = ({ alert: { message, status, show } }) => (
 DisplayAlert.propTypes = {
   alert: PropTypes.objectOf(
     PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.string,
-    ])
-  ),
+      PropTypes.bool.isRequired,
+      PropTypes.string.isRequired,
+    ]),
+  ).isRequired,
 };
 
 export default DisplayAlert;
