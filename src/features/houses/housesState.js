@@ -3,6 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const HOUSES_URL = "http://127.0.0.1:3000/api/v1/houses";
+<<<<<<< HEAD
 let user = JSON.parse(localStorage.getItem('user'))
 let config;
 if (user !== undefined) {
@@ -13,6 +14,10 @@ if (user !== undefined) {
     },
   };
 }
+=======
+const user = JSON.parse(localStorage.getItem('user'))
+const config = { headers: { Authorization: user && user.token } };
+>>>>>>> develop
 
 export const getHouses = createAsyncThunk("houses/getHouses", async () => {
   const response = await axios.get(HOUSES_URL, config);

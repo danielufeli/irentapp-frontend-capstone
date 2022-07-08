@@ -92,6 +92,7 @@ const SignUp = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className={styles.formbody}>
       <section className={styles.signup}>
         <div className={styles.signupContent}>
@@ -174,6 +175,85 @@ const SignUp = () => {
           </form>
         </div>
       </section>
+=======
+    <div className="container d-flex align-items-center justify-content-center">
+      <div className="w-50">
+        <form onSubmit={onSubmit}>
+          <h3 className="text-center">Sign Up</h3>
+          <DisplayAlert alert={alert} />
+          <div className="mb-3">
+            <label htmlFor="name">
+              Name
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter your name"
+                id="name"
+                name="name"
+                value={name}
+                onChange={onChange}
+                required
+              />
+            </label>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Enter email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={onChange}
+                required
+              />
+              Email address
+            </label>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password">
+              Password
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={onChange}
+                required
+              />
+            </label>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="ConfirmPassword">
+              Password
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Confirm Password"
+                id="confirmPassword"
+                name="passwordConfirmation"
+                value={passwordConfirmation}
+                onChange={onChange}
+                required
+              />
+            </label>
+          </div>
+          <div className="d-grid mw-md-100">
+            <button type="submit" className="btn btn-primary" disabled={isLoading}>
+              {isLoading ? 'Loading' : 'Sign Up'}
+            </button>
+          </div>
+          <p className="forgot-password text-right">
+            Already registered
+            {' '}
+            <Link to="/">sign in?</Link>
+          </p>
+        </form>
+      </div>
+>>>>>>> develop
     </div>
   );
 };
