@@ -10,7 +10,7 @@ a {
 
 .navbar {
   width: 20%;
-  background-color: #C1C72E;
+  background-color: #c1c72e;
   height: 100vh;
   padding: 20px;
   display: flex;
@@ -116,7 +116,7 @@ main {
 }
 
 .card-text {
-  font-size: 15px;;
+  font-size: 15px;
 }
 
 .card-title-4 {
@@ -151,4 +151,3 @@ span {
   border-radius: 8px;
   height: 400px;
 }
-
