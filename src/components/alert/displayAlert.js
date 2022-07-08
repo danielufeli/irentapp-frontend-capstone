@@ -11,7 +11,12 @@ const DisplayAlert = ({ alert: { message, status, show } }) => (
 );
 
 DisplayAlert.propTypes = {
-  alert: PropTypes.objectOf(PropTypes.string, PropTypes.boolean).isRequired,
+  alert: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.string,
+    ])
+  ),
 };
 
 export default DisplayAlert;
