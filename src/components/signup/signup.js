@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../../features/auth/authSlice';
 import DisplayAlert from '../alert/displayAlert';
+import styles from './signup.module.css';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -91,83 +92,88 @@ const SignUp = () => {
   }
 
   return (
-    <div className="container d-flex align-items-center justify-content-center">
-      <div className="w-50">
-        <form onSubmit={onSubmit}>
-          <h3 className="text-center">Sign Up</h3>
-          <DisplayAlert alert={alert} />
-          <div className="mb-3">
-            <label htmlFor="name">
-              Name
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter your name"
-                id="name"
-                name="name"
-                value={name}
-                onChange={onChange}
-                required
-              />
-            </label>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="email">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Enter email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={onChange}
-                required
-              />
-              Email address
-            </label>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="password">
-              Password
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Enter password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={onChange}
-                required
-              />
-            </label>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="ConfirmPassword">
-              Password
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Confirm Password"
-                id="confirmPassword"
-                name="passwordConfirmation"
-                value={passwordConfirmation}
-                onChange={onChange}
-                required
-              />
-            </label>
-          </div>
-          <div className="d-grid mw-md-100">
-            <button type="submit" className="btn btn-primary" disabled={isLoading}>
-              {isLoading ? 'Loading' : 'Sign Up'}
-            </button>
-          </div>
-          <p className="forgot-password text-right">
-            Already registered
-            {' '}
-            <Link to="/">sign in?</Link>
-          </p>
-        </form>
-      </div>
+    <div className={styles.formbody}>
+      <section className={styles.signup}>
+        <div className={styles.signupContent}>
+          <form onSubmit={onSubmit} className="signup-form">
+            <h2 className={styles.formTitle}>Sign Up</h2>
+            <DisplayAlert alert={alert} />
+            <div className={styles.SignupFormGroup}>
+              <label htmlFor="name" className={styles.formLabel}>
+                Name
+
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className={styles.formInput}
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={onChange}
+                  required
+                />
+
+              </label>
+            </div>
+            <div className={styles.SignupFormGroup}>
+              <label htmlFor="email" className={styles.formLabel}>
+                Email address
+
+                <input
+                  type="email"
+                  placeholder="Enter email"
+                  className={styles.formInput}
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={onChange}
+                  required
+                />
+              </label>
+            </div>
+            <div className={styles.SignupFormGroup}>
+              <label htmlFor="password" className="{styles.formLabel}">
+                Password
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  className={styles.formInput}
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={onChange}
+                  required
+                />
+              </label>
+            </div>
+            <div className={styles.SignupFormGroup}>
+              <label htmlFor="ConfirmPassword" className={styles.formLabel}>
+                Password
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  className={styles.formInput}
+                  id="confirmPassword"
+                  name="passwordConfirmation"
+                  value={passwordConfirmation}
+                  onChange={onChange}
+                  required
+                />
+              </label>
+            </div>
+            <div className={styles.SignupFormGroup}>
+              <button type="submit" className={styles.formSubmitButton}>
+                Sign Up
+              </button>
+            </div>
+            <p>
+              Already registered
+              {' '}
+              <Link to="/">sign in?</Link>
+            </p>
+          </form>
+        </div>
+      </section>
     </div>
   );
 };
