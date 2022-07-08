@@ -16,9 +16,9 @@ Object {
           >
             <img
               alt="logo"
-              height="140"
+              height="200"
               src="logo.png"
-              width="100"
+              width="200"
             />
           </a>
           <button
@@ -83,10 +83,10 @@ Object {
           class="ps-0 ps-md-5 flex-grow-1 pt-3"
         >
           <div
-            class="container"
+            class="container cards"
           >
             <div
-              class="react-multi-carousel-list carousel-container "
+              class="react-multi-carousel-list carousel-container carousel"
               dir="ltr"
             >
               <ul
@@ -111,9 +111,9 @@ Object {
         >
           <img
             alt="logo"
-            height="140"
+            height="200"
             src="logo.png"
-            width="100"
+            width="200"
           />
         </a>
         <button
@@ -178,10 +178,10 @@ Object {
         class="ps-0 ps-md-5 flex-grow-1 pt-3"
       >
         <div
-          class="container"
+          class="container cards"
         >
           <div
-            class="react-multi-carousel-list carousel-container "
+            class="react-multi-carousel-list carousel-container carousel"
             dir="ltr"
           >
             <ul

@@ -16,41 +16,40 @@ function HouseDetails() {
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1 p-3">
-        <div className="card">
-          <div>
-            <h2>
-              {house.name}
-            </h2>
-          </div>
-          <div>
+        <div className="card cardsss details">
+          <div className="img-hold">
             <img src={house.image_url} alt={house.name} className="img-fluid" />
           </div>
 
-          <div className="card-body">
-            <p className="card-text">
-              Price:
+          <div className="card-bod">
+            <div clasName="cardss">
+              <h4>
+                {house.name}
+              </h4>
+            </div>
+            <p className="card-text-money">
+              $
               {house.price}
               {' '}
               per month
             </p>
             <p className="card-text">
-              description:
               {house.description}
             </p>
             <p className="card-text">
-              city:
+              <span>City:</span>
               {house.city}
             </p>
             <p className="card-text">
-              capacity:
+              <span>Capacity:</span>
               {house.capacity}
             </p>
           </div>
 
-          <p>
-            <Link to="/delete" className="btn btn-primary">Delete House</Link>
-          </p>
-          <button className="btn btn-primary" type="button" onClick={() => setShowpopup(true)}>Add reservation</button>
+          <div className="btns">
+            <Link to="/delete" className="btn btn-danger same-size">Delete House</Link>
+            <button className="btn btn-primary same-size" type="button" onClick={() => setShowpopup(true)}>Add reservation</button>
+          </div>
 
         </div>
         { showpopup && <Modal />}

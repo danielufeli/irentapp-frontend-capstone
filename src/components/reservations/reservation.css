@@ -1,5 +1,7 @@
 .reservation-container {
   margin: 20px 0;
+  overflow-y: scroll;
+  height: 94vh;
 }
 
 article {

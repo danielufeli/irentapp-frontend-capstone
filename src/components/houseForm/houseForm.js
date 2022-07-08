@@ -72,13 +72,13 @@ const HouseForm = () => {
   };
 
   return (
-    <div className="container-fluid d-flex flex-column flex-md-row ">
+    <div className="container container-fluid d-flex flex-column flex-md-row ">
       <Aside />
       <main className="page-content form-v5">
       <div className="form-v5-content">
 
         <form className="form-detail" >
-        <h2>Add a new house</h2>
+          <h2>Add a new house</h2>
           <div className="mb-3 form-row">
             <label htmlFor="name" className="form-label">
               Name

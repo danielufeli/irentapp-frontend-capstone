@@ -52,7 +52,7 @@ function AddReservation() {
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1">
-        <div className="reservation-container">
+        <div className="nice-background">
           <h1>Add Reservation</h1>
           <form onSubmit={handleOnSubmitChange}>
             <label htmlFor="nameContent">Name: </label>

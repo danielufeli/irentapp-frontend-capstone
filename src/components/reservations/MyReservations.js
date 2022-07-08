@@ -57,7 +57,7 @@ function MyReservations() {
   return (
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
-      <main className="ps-0 ps-md-5 flex-grow-1">
+      <main className="ps-0 ps-md-5 flex-grow-1 add-overflow">
         <div className="reservation-container">
           <h1>My Reservations</h1>
           {reservationCards}

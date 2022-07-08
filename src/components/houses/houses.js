@@ -48,8 +48,9 @@ function Houses() {
     <div className="container d-flex flex-column flex-md-row">
       <Aside />
       <main className="ps-0 ps-md-5 flex-grow-1 pt-3">
-        <div className="container">
+        <div className="container cards">
           <Carousel
+            className="carousel"
             responsive={responsive}
             infinite
             containerClass="carousel-container"
@@ -58,15 +59,17 @@ function Houses() {
             itemClass="carousel-item-padding-40-px"
           >
             {houses.map((item) => (
-              <div className="card" key={item.id}>
+              <div className="card cardsss" key={item.id}>
                 <Link to={`${item.id}`}>
                   <div id={item.id}>
-                    <img
-                      className="img-fluid"
-                      src={item.image_url}
-                      alt={item.name}
-                    />
-                    <div className="card-body">
+                    <div className="img-holderr">
+                      <img
+                        className="img-fluid"
+                        src={item.image_url}
+                        alt={item.name}
+                      />
+                    </div>
+                    <div className="card-body card-title-4">
                       <h4 className="card-title">{item.name}</h4>
                       <p className="card-text">
                         {item.price}

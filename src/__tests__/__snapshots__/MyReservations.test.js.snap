@@ -16,9 +16,9 @@ Object {
           >
             <img
               alt="logo"
-              height="140"
+              height="200"
               src="logo.png"
-              width="100"
+              width="200"
             />
           </a>
           <button
@@ -80,7 +80,7 @@ Object {
           </div>
         </aside>
         <main
-          class="ps-0 ps-md-5 flex-grow-1"
+          class="ps-0 ps-md-5 flex-grow-1 add-overflow"
         >
           <div
             class="reservation-container"
@@ -105,9 +105,9 @@ Object {
         >
           <img
             alt="logo"
-            height="140"
+            height="200"
             src="logo.png"
-            width="100"
+            width="200"
           />
         </a>
         <button
@@ -169,7 +169,7 @@ Object {
         </div>
       </aside>
       <main
-        class="ps-0 ps-md-5 flex-grow-1"
+        class="ps-0 ps-md-5 flex-grow-1 add-overflow"
       >
         <div
           class="reservation-container"
