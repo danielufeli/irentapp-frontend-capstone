@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <section
+          class="login_bg"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-sm-9 col-md-7 col-lg-5 mx-auto"
+              >
+                <div
+                  class="card border-0 shadow rounded-3 my-5"
+                >
+                  <div
+                    class="card-body p-4 p-sm-5"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Welcome!
+                    </h1>
+                    <h5
+                      class="card-title text-center mb-5 fs-5"
+                    >
+                      Kindly Enter your Details to Login
+                    </h5>
+                    <br />
+                    <form>
+                      <div
+                        class="form-group mb-3"
+                      >
+                        <input
+                          class="form-control"
+                          name="email"
+                          placeholder="Enter your E-mail"
+                          type="email"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="form-group mb-3"
+                      >
+                        <input
+                          class="form-control"
+                          name="password"
+                          placeholder="Enter your Password"
+                          type="password"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="form-check mb-3"
+                      >
+                        <label
+                          class="form-check-label"
+                          for="rememberPasswordCheck"
+                        >
+                          Remember password
+                          <input
+                            class="form-check-input"
+                            id="rememberPasswordCheck"
+                            type="checkbox"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                      <div
+                        class="d-grid"
+                      >
+                        <button
+                          class="btn btn-outline-dark btn-login text-uppercase fw-bold"
+                          type="submit"
+                        >
+                          Sign in
+                        </button>
+                      </div>
+                      <hr
+                        class="my-4"
+                      />
+                      <div
+                        class="d-grid mb-2"
+                      >
+                        <a
+                          class="btn btn-warning btn-login text-uppercase fw-bold"
+                          href="/signup"
+                        >
+                          Sign Up
+                        </a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <section
+        class="login_bg"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-sm-9 col-md-7 col-lg-5 mx-auto"
+            >
+              <div
+                class="card border-0 shadow rounded-3 my-5"
+              >
+                <div
+                  class="card-body p-4 p-sm-5"
+                >
+                  <h1
+                    class="text-center"
+                  >
+                    Welcome!
+                  </h1>
+                  <h5
+                    class="card-title text-center mb-5 fs-5"
+                  >
+                    Kindly Enter your Details to Login
+                  </h5>
+                  <br />
+                  <form>
+                    <div
+                      class="form-group mb-3"
+                    >
+                      <input
+                        class="form-control"
+                        name="email"
+                        placeholder="Enter your E-mail"
+                        type="email"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="form-group mb-3"
+                    >
+                      <input
+                        class="form-control"
+                        name="password"
+                        placeholder="Enter your Password"
+                        type="password"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="form-check mb-3"
+                    >
+                      <label
+                        class="form-check-label"
+                        for="rememberPasswordCheck"
+                      >
+                        Remember password
+                        <input
+                          class="form-check-input"
+                          id="rememberPasswordCheck"
+                          type="checkbox"
+                          value=""
+                        />
+                      </label>
+                    </div>
+                    <div
+                      class="d-grid"
+                    >
+                      <button
+                        class="btn btn-outline-dark btn-login text-uppercase fw-bold"
+                        type="submit"
+                      >
+                        Sign in
+                      </button>
+                    </div>
+                    <hr
+                      class="my-4"
+                    />
+                    <div
+                      class="d-grid mb-2"
+                    >
+                      <a
+                        class="btn btn-warning btn-login text-uppercase fw-bold"
+                        href="/signup"
+                      >
+                        Sign Up
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
